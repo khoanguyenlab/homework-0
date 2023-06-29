@@ -187,3 +187,9 @@ df %>% ggplot(aes(Year, Style, color = Player)) +
   geom_line()
 str(df)
 head(df)
+
+#can i go directly from the vectors to a data.frame?
+# Try on FieldGoals
+df2 <- data.frame(Players, Seasons, KobeBryant_FG, JoeJohnson_FG, LeBronJames_FG, CarmeloAnthony_FG, DwightHoward_FG, ChrisBosh_FG, ChrisPaul_FG, KevinDurant_FG, DerrickRose_FG, DwayneWade_FG)
+#the above line does not seem to be what I want. Are there any other way that I do not have to go through creating a matrix?
+
