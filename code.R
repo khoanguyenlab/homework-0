@@ -182,7 +182,7 @@ Points <- as.data.frame(Points)
 Points <- rownames_to_column(Points, var = "Player")
 Points_long <- gather(Points, Year, Pts, -Player)
 ind <- Points_long$Pts
-df <- df %>% mutate(Pts = ind, Goals = ind1, Excl = Pts - FT*1, Style = Pts/Goals) 
+df <- df %>% mutate(Pts = ind, Goals = ind1, Excl = Pts - FT, Style = Excl/Goals) 
 df %>% ggplot(aes(Year, Style, color = Player)) + 
   geom_line()
 str(df)
